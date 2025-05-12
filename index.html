@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ne"> <!-- Changed language to Nepali -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddha Jayanti Wishes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 90vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            max-width: 500px;
+            width: 90%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 22px); /* Adjust for padding and border */
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 5px; /* Added some margin for multiple buttons */
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #generatedLinkContainer, #generatedRecipientLinkContainer {
+            margin-top: 15px;
+            word-wrap: break-word;
+        }
+        #generatedLinkContainer a, #generatedRecipientLinkContainer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        #generatedLinkContainer a:hover, #generatedRecipientLinkContainer a:hover {
+            text-decoration: underline;
+        }
+        #greetingMessage {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+            opacity: 0; /* Start hidden for animation */
+            transform: translateY(20px); /* Start slightly lower for animation */
+        }
+        .animate-greeting {
+            animation: fadeInSlideUp 1.5s ease-out forwards;
+        }
+        @keyframes fadeInSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .copy-button {
+            margin-left: 5px; /* Adjusted margin */
+            background-color: #28a745;
+        }
+        .copy-button:hover {
+            background-color: #1e7e34;
+        }
+        .share-button { /* Style for the new Share button */
+            margin-left: 5px;
+            background-color: #17a2b8; /* Info blue color */
+        }
+        .share-button:hover {
+            background-color: #117a8b;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : '13d0c6c9e49ea6e858b403118abeeac5',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/13d0c6c9e49ea6e858b403118abeeac5/invoke.js"></script>
+
+
+        <!-- Yeh section tab dikhega jab koi sender nahi hai (initial load) -->
+        <div id="initialState">
+            <img src="laxmi.gif" alt="buddha Animation">
+            <p>बुद्ध जयन्तीको पावन अवसरमा तपाईं र तपाईंको परिवारमा शान्ति, समृद्धि र सुस्वास्थ्यको कामना गर्दछु। भगवान् गौतम बुद्धको उपदेशले हामी सबैलाई सत्य, अहिंसा र करुणाको मार्गमा चल्न प्रेरणा प्रदान गरोस्। बुद्ध जयन्तीको हार्दिक शुभकामना!</p>
+            <p>बुद्ध जयन्तीको शुभकामना पठाउनको लागि आफ्नो नाम लेख्नुहोस्:</p>
+            <input type="text" id="senderNameInput" placeholder="तपाईंको नाम लेख्नुहोस्">
+            <button onclick="generateLink()">लिङ्क बनाउनुहोस्</button>
+            <div id="generatedLinkContainer"></div>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '13d0c6c9e49ea6e858b403118abeeac5',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/13d0c6c9e49ea6e858b403118abeeac5/invoke.js"></script>
+        </div>
+
+        <!-- Yeh section tab dikhega jab link me sender ka naam hoga -->
+        <div id="wishingState" style="display: none;">
+            <h1 id="greetingMessage"></h1>
+            <img src="laxmi.gif" alt="Laxmi Animation"> <!-- Corrected Laxmi.gif to laxmi.gif -->
+            <p>बुद्ध जयन्तीको पावन अवसरमा तपाईं र तपाईंको परिवारमा शान्ति, समृद्धि र सुस्वास्थ्यको कामना गर्दछु। भगवान् गौतम बुद्धको उपदेशले हामी सबैलाई सत्य, अहिंसा र करुणाको मार्गमा चल्न प्रेरणा प्रदान गरोस्। बुद्ध जयन्तीको हार्दिक शुभकामना!</p>
+            <p>तपाईं पनि आफ्ना शुभचिन्तकलाई बुद्ध जयन्तीको शुभकामना पठाउन चाहनुहुन्छ भने? तपाईंको नाम लेख्नुहोस् र पठाउनुहोस्:</p>
+            <input type="text" id="recipientNameInput" placeholder="तपाईंको नाम लेख्नुहोस्">
+            <button onclick="generateRecipientLink()">नयाँ लिङ्क बनाउनुहोस्</button>
+            <div id="generatedRecipientLinkContainer"></div>
+        </div>
+    </div>
+
+    <script>
+        const gifFileName = "laxmi.gif"; // Agar aapki GIF ka naam alag hai to yahan badal dein
+
+        window.onload = function() {
+            const images = document.querySelectorAll('img');
+            const basePath = getBasePathForGitHubPages();
+            images.forEach(img => {
+                if (img.getAttribute('src').endsWith(gifFileName)) {
+                   img.src = basePath + gifFileName;
+                }
+            });
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const sender = urlParams.get('sender');
+
+            if (sender) {
+                document.getElementById('initialState').style.display = 'none';
+                document.getElementById('wishingState').style.display = 'block';
+                
+                const greetingElement = document.getElementById('greetingMessage');
+                greetingElement.textContent = `बुद्ध जयन्तीको हार्दिक शुभकामना!, ${decodeURIComponent(sender)} को तर्फबाट !`;
+                greetingElement.classList.add('animate-greeting');
+            } else {
+                document.getElementById('initialState').style.display = 'block';
+                document.getElementById('wishingState').style.display = 'none';
+            }
+        };
+
+        function getBasePathForGitHubPages() {
+            const hostname = window.location.hostname;
+            if (hostname.includes('github.io')) {
+                const pathSegments = window.location.pathname.split('/').filter(segment => segment);
+                if (pathSegments.length > 0) {
+                    return `/${pathSegments[0]}/`;
+                }
+            }
+            return "";
+        }
+
+        async function shareViaWebApi(shareUrl, senderName) {
+            const tempElem = document.createElement('div');
+            tempElem.textContent = senderName;
+            const sanitizedSenderName = tempElem.innerHTML;
+
+            const shareText = `${sanitizedSenderName} बाट बुद्ध जयन्तीको शुभकामना! तलको लिङ्क खोल्नुहोस्:`;
+            const shareData = {
+                title: 'बुद्ध जयन्तीको शुभकामना!',
+                text: shareText,
+                url: shareUrl,
+            };
+            try {
+                await navigator.share(shareData);
+            } catch (err) {
+                // console.error('Share error:', err);
+                // Optionally alert user if sharing failed and not cancelled
+                // if (err.name !== 'AbortError') {
+                //     alert('शेयर गर्न सकिएन।');
+                // }
+            }
+        }
+
+        function generateLinkShared(name, linkContainerId) { // Removed unused inputElementIdForNext
+            if (name === "") {
+                alert("कृपया तपाईंको नाम लेख्नुहोस्।");
+                return;
+            }
+            const baseUrl = window.location.href.split('?')[0];
+            const shareUrl = `${baseUrl}?sender=${encodeURIComponent(name)}`;
+            
+            const linkContainer = document.getElementById(linkContainerId);
+
+            let htmlOutput = `यो लिङ्क साझा गर्नुहोस्: <br><a href="${shareUrl}" target="_blank">${shareUrl}</a>
+                               <button class="copy-button" onclick="copyToClipboard('${shareUrl}')">Copy</button>`; 
+
+            if (navigator.share) {
+                const shareButton = document.createElement('button');
+                shareButton.classList.add('share-button');
+                shareButton.textContent = 'शेयर गर्नुहोस्'; 
+                shareButton.onclick = function() { shareViaWebApi(shareUrl, name); };
+                
+                linkContainer.innerHTML = htmlOutput; 
+                linkContainer.appendChild(document.createTextNode(' ')); 
+                linkContainer.appendChild(shareButton); 
+            } else {
+                linkContainer.innerHTML = htmlOutput;
+            }
+        }
+
+        function generateLink() {
+            const name = document.getElementById('senderNameInput').value.trim();
+            generateLinkShared(name, 'generatedLinkContainer');
+        }
+
+        function generateRecipientLink() {
+            const name = document.getElementById('recipientNameInput').value.trim();
+            generateLinkShared(name, 'generatedRecipientLinkContainer');
+        }
+
+        function tryFallbackCopy(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            // Styling to make textarea invisible and out of the way
+            textArea.style.position = "fixed";
+            textArea.style.top = "-9999px";
+            textArea.style.left = "-9999px";
+            textArea.style.opacity = "0";
+
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    alert('Copy');
+                } 
+                    
+                
+            } catch (err) {
+                // console.error('Fallback copy error: ', err);
+                
+            }
+            document.body.removeChild(textArea);
+        }
+
+        function copyToClipboard(text) {
+            // navigator.clipboard.writeText modern API HTTPS ma matra kaam garna sakchha.
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(function() {
+                    alert('copy successful ');
+                }).catch(function(err) {
+                    // console.warn('Modern copy failed, trying fallback: ', err);
+                    
+                    tryFallbackCopy(text);
+                });
+            } else {
+                // console.warn('navigator.clipboard.writeText not available, using fallback.');
+                
+                tryFallbackCopy(text);
+            }
+        }
+    </script>
+</body>
+</html>
